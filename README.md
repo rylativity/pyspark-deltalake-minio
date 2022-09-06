@@ -8,6 +8,8 @@ Follow the setup steps below to get started.
 
 ## Setup
 
+***You must have Docker and docker-compose installed before proceeding***
+
 **Note: If you ever want to wipe all of your data in Minio (including any Delta Lake tables), you can always run `docker-compose down -v` to remove containers AND volumes for a fresh start.**
 
 - Run `docker-compose up -d` (this will start a Spark cluster and a Jupyter Notebook server with PySpark and Delta Lake dependencies installed, as well as a Minio (S3) instance. It will also launch an initialization container for Minio, which will create a bucket called 'test' and a Minio service account for use with PySpark.)
