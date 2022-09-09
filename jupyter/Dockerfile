@@ -4,13 +4,8 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk &&\
     pip install jupyterlab
 
 COPY ./requirements.txt .
+
 RUN pip install -r requirements.txt
-
-# RUN useradd -m jupyter
-# USER jupyter
-# WORKDIR /home/jupter/
-
-# COPY notebooks /notebooks/
 
 WORKDIR /notebooks
 
