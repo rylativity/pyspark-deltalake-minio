@@ -51,18 +51,9 @@ services:
       - 9090:9090
       - 9000:9000
   minio-init:
-    image: minio/mc # MinioClient image; use it to make buckets and perform any other tasks on startup
+    build: ./minio # MinioClient image; use it to make buckets and perform any other tasks on startup
     depends_on:
       - minio
-    entrypoint: >
-      /bin/sh -c "
-      sleep 3;
-      /usr/bin/mc alias set myminio http://minio:9000 minio minio123;
-      /usr/bin/mc mb myminio/test;
-      /usr/bin/mc policy set public myminio/test;
-      /usr/bin/mc admin user svcacct add --access-key 'sparkaccesskey' --secret-key 'sparksupersecretkey' myminio minio;
-      exit 0;
-      "
       
 volumes:
   minio-data:
