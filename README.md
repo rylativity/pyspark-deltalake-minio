@@ -1,5 +1,7 @@
 # Pyspark, Delta Lake, and Minio
 
+## **ROLLED INTO container-analytics-platform REPOSITORY**
+
 This repository contains a fully functional and self-contained example of a Spark cluster configured to write Delta Lake tables to Minio (S3 Object Storage).
 An example Jupyter Notebook is provided in the jupyter/notebooks/ folder to get you started with Pyspark and Delta Lake.
 This repository is intended to be a starting point that can be expanded upon to suit your use case.
